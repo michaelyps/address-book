@@ -30,12 +30,12 @@ body {
 }
 
 #judul_input {
+    font-family: 'Kirang Haerang', cursive;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
     width: 300px;
     text-align: center;
-    font-family: 'Kirang Haerang', cursive;
 }
 
 .list-group-item {
@@ -47,7 +47,7 @@ body {
     margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
-    width: 500px;
+    width: 300px;
     border: 5px dashed #000;
     padding: 10px;
 }
@@ -69,11 +69,37 @@ body {
 #judul {
     font-family: 'Gloria Hallelujah', cursive;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 20px;
     font-size: 50px;
 }
 
 #cari {
     font-family: 'Kirang Haerang', cursive;
     text-align: center;
+}
+
+#footer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#kolomcari {
+    margin-left: 100px;
+}
+
+#kolom_update {
+    margin-right: 100px;
+}
+
+#table_update {
+    padding: 20px;
+    width: 800px;
+    border: 5px dashed #000;
+}
+
+#judul_update {
+    font-family: 'Kirang Haerang', cursive;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }

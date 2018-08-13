@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/style.css">
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Kirang+Haerang" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Daftar Address Book</title>
 </head>
 <body>
@@ -14,7 +18,7 @@
         <h1 id="judul">ADDRESS LIST :)</h1>
         <div id="middle">
             <div id="kolom_signup">
-                <div id="judul_input"><h1>Sign Up Here :</h1></div>
+                <div><h1 id="judul_input">Sign Up Here :</h1></div>
                 <div id="table">
                     <form>
                         <div class="form-group">
@@ -22,34 +26,45 @@
                             <input type="text" class="form-control" id="example_input_name" placeholder="Enter name">
                         </div>
                         <div class="form-group">
+                            <label for="exampleInputPassword1">Email</label>
+                            <input type="text" class="form-control" id="example_input_email" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
                             <label for="exampleInputPassword1">Address</label>
-                            <input type="text" class="form-control" id="example_input_address" placeholder="Address">
+                            <input type="text" class="form-control" id="example_input_address" placeholder="Enter address">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Phone</label>
-                            <input type="text" class="form-control" id="example_input_phone" placeholder="Phone">
+                            <input type="text" class="form-control" id="example_input_phone" placeholder="Enter phone">
                         </div>
-                        <div class="btn btn-primary" id="btn_signup">Sign Up</div>
+                        <div class="d-flex justify-content-between">
+                            <div class="btn btn-primary" id="btn_signup">Sign Up</div>
+                            <button class="btn btn-primary" id="btn_update" style="display: none;">Update</button>
+                        </div>
                     </form>
                 </div>
             </div>
             <div id="kolom_list">
-                <div id="judul_output"><h1>Sign Up List :</h1></div>
+                <div><h1 id="judul_output">Sign Up List :</h1></div>
                 <div >
                     <ul class="list-group list-group-flush" id="output_display">
                     </ul>
                 </div>
             </div>
         </div>
-        <h1 id="cari">Search Here :</h1>
-        <div id="search">
-            <form>
-                <div class="form-group">
-                    <label for="exampleInputEmail1"></label>
-                    <input type="text" class="form-control" id="example_input_search" placeholder="Enter Name">
+        <div id="footer">
+            <div id="kolomcari">
+                <h1 id="cari">Search Here :</h1>
+                <div id="search">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1"></label>
+                            <input type="text" class="form-control" id="example_input_search" placeholder="Enter Name">
+                        </div>
+                        <div class="btn btn-primary" id="btn_search">Search</div>
+                    </form>
                 </div>
-                <div class="btn btn-primary" id="btn_search">Search</div>
-            </form>
+            </div>
         </div>
     </div>
     <script src="./assets/js/dom.js"></script>
