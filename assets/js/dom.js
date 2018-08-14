@@ -16,7 +16,7 @@ const searchButton = document.getElementById("btn_search")
 const update_button = document.getElementById("btn_update")
 
 signupButton.addEventListener("click", addAddress)
-searchButton.addEventListener("click", searchList)
+exampleInputSearch.addEventListener("keyup", searchList)
 
 window.onbeforeunload = function () {
     localStorage.addressbook_list = JSON.stringify(addressbook_list)
@@ -30,6 +30,10 @@ function addAddress() {
         phone: exampleInputPhone.value
     })
     displayAddress()
+    exampleInputName.value = ""
+    exampleInputEmail.value = ""
+    exampleInputAddress.value = ""
+    exampleInputPhone.value = ""
 }
 
 function displayAddress() {
@@ -53,8 +57,8 @@ function deleteList(index) {
 
 function searchList() {
     let temp = ""
-    addressbook_list.forEach(function (list, index) {
-        if (list.name === exampleInputSearch.value) {
+    addressbook_list.filter(function (list, index) {
+        if (list.name.toLowerCase().includes(exampleInputSearch.value.toLowerCase())) {
             temp += `<li class="list-group-item">Name: ${list.name}
             <br>Email: ${list.email}
             <br>Address: ${list.address}
@@ -72,6 +76,7 @@ function updateList(index) {
     exampleInputEmail.value = addressbook_list[index].email
     exampleInputAddress.value = addressbook_list[index].address
     exampleInputPhone.value = addressbook_list[index].phone
+    signupButton.style.display = "none"
     update_button.style.display = "block"
     
     update_button.onclick = function () {
