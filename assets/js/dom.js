@@ -59,7 +59,8 @@ function searchList() {
             <br>Email: ${list.email}
             <br>Address: ${list.address}
             <br>Phone: ${list.phone}
-            <button onClick="deleteList(${index})">delete</button>
+            <div><button onClick="updateList(${index})" class="edit"><i class="material-icons">mode_edit</i></button>
+            <button onClick="deleteList(${index})" class="sampah"><i class="material-icons">delete</i></button></div>
             </li>`;
         }
     })
