@@ -58,7 +58,10 @@ function deleteList(index) {
 function searchList() {
     let temp = ""
     addressbook_list.filter(function (list, index) {
-        if (list.name.toLowerCase().includes(exampleInputSearch.value.toLowerCase())) {
+        if (list.name.toLowerCase().includes(exampleInputSearch.value.toLowerCase()) 
+        ||list.email.toLowerCase().includes(exampleInputSearch.value.toLowerCase())
+        ||list.address.toLowerCase().includes(exampleInputSearch.value.toLowerCase())
+        ||list.phone.toLowerCase().includes(exampleInputSearch.value.toLowerCase())) {
             temp += `<li class="list-group-item">Name: ${list.name}
             <br>Email: ${list.email}
             <br>Address: ${list.address}
