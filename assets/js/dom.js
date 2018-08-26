@@ -38,7 +38,7 @@ function addAddress() {
 
 function displayAddress() {
     let temp = ""
-    for(var i = 0; i < addressbook_list.length; i++) {
+    for (var i = 0; i < addressbook_list.length; i++) {
         temp += `<li class="list-group-item"><div>Name: ${addressbook_list[i].name}
         <br>Email: ${addressbook_list[i].email}
         <br>Address: ${addressbook_list[i].address}
@@ -58,10 +58,10 @@ function deleteList(index) {
 function searchList() {
     let temp = ""
     addressbook_list.filter(function (list, index) {
-        if (list.name.toLowerCase().includes(exampleInputSearch.value.toLowerCase()) 
-        ||list.email.toLowerCase().includes(exampleInputSearch.value.toLowerCase())
-        ||list.address.toLowerCase().includes(exampleInputSearch.value.toLowerCase())
-        ||list.phone.toLowerCase().includes(exampleInputSearch.value.toLowerCase())) {
+        if (list.name.toLowerCase().includes(exampleInputSearch.value.toLowerCase())
+            || list.email.toLowerCase().includes(exampleInputSearch.value.toLowerCase())
+            || list.address.toLowerCase().includes(exampleInputSearch.value.toLowerCase())
+            || list.phone.toLowerCase().includes(exampleInputSearch.value.toLowerCase())) {
             temp += `<li class="list-group-item">Name: ${list.name}
             <br>Email: ${list.email}
             <br>Address: ${list.address}
@@ -81,7 +81,7 @@ function updateList(index) {
     exampleInputPhone.value = addressbook_list[index].phone
     signupButton.style.display = "none"
     update_button.style.display = "block"
-    
+
     update_button.onclick = function () {
         update_address(index)
     }
